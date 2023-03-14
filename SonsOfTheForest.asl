@@ -1,5 +1,5 @@
 state("SonsOfTheForest"){
-	float health: "GameAssembly.dll", 0x0502C8C0, 0xB8, 0x3D0, 0xB0, 0x2B0;
+	float health: "fmodstudio.dll", 0x002B1E50, 0x2A8, 0x8, 0x4C;
 	uint location: "GameAssembly.dll", 0x05078420, 0xB8, 0xD8, 0xB4;
 }
 
@@ -8,7 +8,7 @@ startup{
 }
 
 start{
-	if(current.health == 28){
+	if(current.health <= 28 && current.health > 0 ){
 		return true;
 	}
 }
